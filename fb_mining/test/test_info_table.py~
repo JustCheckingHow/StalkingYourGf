@@ -1,0 +1,20 @@
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
+from time import sleep
+
+def error():
+	browse = webdriver.Firefox()
+	browse.get('file:///home/pablo/Desktop/internetbrowsing/test/Dominika%20Donitto%20Gawlikowska.html')
+	try:
+		source = browse.find_element_by_xpath(".//*[@id='u_jsonp_2_24']/div/div/div/")
+	except NoSuchElementException:
+		print("nie znaleziono!")
+		sleep(1)
+		error()	
+	
+	source = source.get_attribute('innerHTML')
+	print(source)
+
+	browse.close()
+	
+error()
