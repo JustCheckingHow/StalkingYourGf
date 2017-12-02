@@ -10,7 +10,7 @@ from friends_analyzis import find_mutual_friends
 
 
 def start_browser():
-	browse = webdriver.Safari()
+	browse = webdriver.Firefox()
 	browse.get('http://facebook.com/')
 	return browse
 
