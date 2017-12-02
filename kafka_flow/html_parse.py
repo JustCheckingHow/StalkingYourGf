@@ -51,11 +51,6 @@ while True:
     time.sleep(5)
     sthm = browser.find_element_by_tag_name('body')
     string_to_send = sthm.get_attribute('innerHTML')
-    # w_string = "wget {} --post-data \"email={}&pass={}\" --no-check-certificate --keep-session-cookies --save-cookies=cookies --load-cookies=cookies -U \"Mozilla/5.0 (Windows NT 5.2; rv:2.0.1) Gecko/20100101 Firefox/4.0.1\" -O test".format(url, mail, password)
-    # print(w_string)
-    # os.system(w_string)
-    # with open('test', 'r') as f:
-    #     string_to_send = f.read()
 
     r = string_to_send
     p = len(r)
