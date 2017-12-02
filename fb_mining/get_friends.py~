@@ -1,0 +1,12 @@
+from selenium import webdriver
+import codecs
+
+browse = webdriver.Firefox()
+browse.get('file:///home/pablo/Desktop/internetbrowsing/friends.html')
+source = browse.find_element_by_id('pagelet_timeline_medley_friends')
+source = source.get_attribute('innerHTML')
+with codecs.open("wnik", "w", encoding='utf8') as f:
+	f.write(source)
+f.close()
+browse.close()
+#print(source)

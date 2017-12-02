@@ -1,0 +1,15 @@
+lista osob do przeskanowania 
+dodawanie daty przy skanowaniu
+sortowanie listy po dacie skanowania (rozpoczynanie od tego co byl sprawdzany najdawniej lub wcale)
+sprawdzanie ilu znajomych pokazuje fb i porownanie z brakującymi
+
+ANALITYCS:
+	podaje 2 nazwiska wynikiem osoby które je łączą 1 stopien zanurzenia
+	podaje 2 nazwiska wynikiem osoby które je łączą 2 stopien zanurzenia
+	
+
+DANE:
+	
+WYDAJNOŚĆ:
+	puścić tworzenie bazy na 2 wątku
+	
