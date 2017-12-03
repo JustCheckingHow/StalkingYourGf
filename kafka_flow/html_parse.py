@@ -4,7 +4,9 @@ import requests
 import logging
 import os
 from selenium import webdriver
-
+print ("PLEASE ENTER MAIL AND PASSWORD BEFORE START")
+mail = None
+password = None
 def start_browser():
 	browse = webdriver.Firefox()
 	browse.get('http://facebook.com/')
@@ -12,10 +14,10 @@ def start_browser():
 
 def log_in(browse):
 	mail_field = browse.find_element_by_id("email")
-	mail_field.send_keys("witek1151@wp.pl")
+	mail_field.send_keys(mail)
 
 	passwd = browse.find_element_by_id("pass")
-	passwd.send_keys("Wants1^Perfect^Through")
+	passwd.send_keys(password)
 
 	login_button = browse.find_element_by_id("loginbutton")
 	login_button.click()
@@ -44,8 +46,7 @@ while True:
     topic = url_tab.split('|')[1].split(';')[0]
     print("\nTOPIC: ",topic)
     producer = kafka.KafkaProducer(bootstrap_servers=consuming_host)
-    mail = "witek1151@wp.pl"
-    password = "Wants1^Perfect^Through"
+
 
     browser.get(url)
     time.sleep(5)
